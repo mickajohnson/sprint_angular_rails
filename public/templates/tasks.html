@@ -1,0 +1,78 @@
+<h1 class="text-center">Agile Sprint Planner</h1>
+<hr>
+<div id="toDo">
+  <h3 class="text-center">To Do</h3>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Due Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="toDoTask in toDoTasks">
+        <td>
+          <div class="{{toDoTask.priority}}"></div>
+          {{toDoTask.description}}
+        </td>
+        <td>{{toDoTask.due_date | date}}</td>
+        <td><button type="button" name="button" class="btn btn-info" ng-click="changeStatus(toDoTask.id)" >Doing</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <div ng-hide="toDoTasks.length">
+    <h4 class="text-center">You ain't got nuthin ta-do</h4>
+  </div>
+</div>
+<hr>
+<div id="Doing">
+  <h3 class="text-center">Doing</h3>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Due Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="DoingTask in DoingTasks">
+        <td><div class="{{DoingTask.priority}}"></div> {{DoingTask.description}}</td>
+        <td>{{DoingTask.due_date | date}}</td>
+        <td><button type="button" name="button" class="btn btn-success" ng-click="changeStatus(DoingTask.id)">Done</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <div ng-hide="DoingTasks.length">
+    <h4 class="text-center">You ain't doin a thang</h4>
+  </div>
+</div>
+<hr>
+<div id="Done">
+  <h3 class="text-center">Done</h3>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Due Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="DoneTask in DoneTasks">
+        <td><div class="{{DoneTask.priority}}"></div> {{DoneTask.description}}</td>
+        <td>{{DoneTask.due_date | date }}</td>
+        <td><button type="button" name="button" class="btn btn-warning" ng-click="changeStatus(DoneTask.id)">Hide</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <div ng-hide="DoneTasks.length">
+    <h4 class="text-center">You ain't dun nuthin</h4>
+  </div>
+</div>
+<hr>
+<a class="btn btn-primary span" href="#!/new">Create a Task</a>
+<div id="Awesome">
+
+</div>

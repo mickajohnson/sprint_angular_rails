@@ -1,0 +1,4 @@
+npm 'browserify', require: false, development: true
+npm 'angular'
+npm 'angular-resource'
+npm 'angular-route'

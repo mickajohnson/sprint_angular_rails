@@ -1,0 +1,25 @@
+<h1 class="text-center">Create New Task</h1>
+<div ng-show="errors">
+  <ul>
+    <li ng-repeat="error in errors"><h4>You suck: {{error.message}}</h4></li>
+  </ul>
+</div>
+<form ng-submit="create()">
+  <div class="form-group">
+    <label for="description" >
+      Description <input class="form-control" type="text" name="description" ng-model="task.description">
+    </label>
+    <label for="due_date" >
+      Due Date <input class="form-control" type="date" name="due_date" ng-model="task.due_date">
+    </label>
+    <label for="Priority" >
+      <select ng-model='task.priority'>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+    </label>
+  </div>
+  <input class="btn btn-success" type='submit' value='Create Task'>
+</form>
+<a class="btn btn-primary" href="#!/">Home</a>

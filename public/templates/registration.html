@@ -1,0 +1,23 @@
+<h1>Registration</h1>
+<form ng-submit="register()">
+  <label for="email">
+    Email <input type="text" name="email" ngmodel="login.email">
+  </label>
+  <label for="firstName">
+    Frist Name <input type="text" name="firstName" ngmodel="login.firstName">
+  </label>
+  <label for="lastName">
+    Last Name <input type="text" name="lastName" ngmodel="login.lastName">
+  </label>
+  <label for="password">
+    Password <input type="password" name="password" ngmodel="login.password">
+  </label>
+  <label for="confirmPassword">
+    Confirm Password <input type="password" name="confirmPassword" ngmodel="login.confirmPassword">
+  </label>
+  <label for="birthday">
+    Birthday <input type="date" name="birthday" ngmodel="login.birthday">
+  </label>
+  <input type="submit" value="Log In">
+</form>
+<a href="#!/">Already registered? Log in!</a>
