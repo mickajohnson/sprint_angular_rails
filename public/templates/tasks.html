@@ -7,6 +7,7 @@
       <tr>
         <th>Description</th>
         <th>Due Date</th>
+        <th>Priority</th>
         <th>Action</th>
       </tr>
     </thead>
@@ -17,6 +18,7 @@
           {{toDoTask.description}}
         </td>
         <td>{{toDoTask.due_date | date}}</td>
+        <td>{{toDoTask.priority}}</td>
         <td><button type="button" name="button" class="btn btn-info" ng-click="changeStatus(toDoTask.id)" >Doing</button></td>
       </tr>
     </tbody>
@@ -33,6 +35,7 @@
       <tr>
         <th>Description</th>
         <th>Due Date</th>
+        <th>Priority</th>
         <th>Action</th>
       </tr>
     </thead>
@@ -40,6 +43,7 @@
       <tr ng-repeat="DoingTask in DoingTasks">
         <td><div class="{{DoingTask.priority}}"></div> {{DoingTask.description}}</td>
         <td>{{DoingTask.due_date | date}}</td>
+        <td>{{DoingTask.priority}}</td>
         <td><button type="button" name="button" class="btn btn-success" ng-click="changeStatus(DoingTask.id)">Done</button></td>
       </tr>
     </tbody>
@@ -56,6 +60,7 @@
       <tr>
         <th>Description</th>
         <th>Due Date</th>
+        <th>Priority</th>
         <th>Action</th>
       </tr>
     </thead>
@@ -63,6 +68,7 @@
       <tr ng-repeat="DoneTask in DoneTasks">
         <td><div class="{{DoneTask.priority}}"></div> {{DoneTask.description}}</td>
         <td>{{DoneTask.due_date | date }}</td>
+        <td>{{DoneTask.priority}}</td>
         <td><button type="button" name="button" class="btn btn-warning" ng-click="changeStatus(DoneTask.id)">Hide</button></td>
       </tr>
     </tbody>
